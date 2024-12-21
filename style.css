@@ -1,0 +1,219 @@
+/* Soft Cyan (Full Slider Bar): hsl(174, 77%, 80%)
+- Strong Cyan (Slider Backround): hsl(174, 86%, 45%)
+- Light Grayish Red (Discount Background): hsl(14, 92%, 95%)
+- Light Red (Discount Text): hsl(15, 100%, 70%)
+- Pale Blue (CTA Text): hsl(226, 100%, 87%)
+
+### Neutral
+
+- White (Pricing Component Background): hsl (0, 0%, 100%)
+- Very Pale Blue (Main Background): hsl(230, 100%, 99%)
+- Light Grayish Blue (Empty Slider Bar): hsl(224, 65%, 95%)
+- Light Grayish Blue (Toggle Background): hsl(223, 50%, 87%)
+- Grayish Blue (Text): hsl(225, 20%, 60%)
+- Dark Desaturated Blue (Text & CTA Background): hsl(227, 35%, 25%) */
+body {
+    background-color: hsl(230, 100%, 99%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: url(/images/pattern-circles.svg);
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 40px;
+}
+
+.box-1 {
+    color: hsl(227, 35%, 25%);
+
+}
+
+.box-2 {
+    color: hsl(225, 20%, 60%);
+}
+
+.box-3 {
+    color: hsl(225, 20%, 60%);
+
+}
+
+.box-4 {
+    color: hsl(227, 35%, 25%);
+    font-size: 50px;
+
+}
+
+.card-1 {
+    color: hsl(225, 20%, 60%);
+    font-size: 20px;
+}
+
+.container-2 {
+    background-color: white;
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    box-shadow: 2px 2px 4px gray;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    /* Removes default styles in Safari */
+    width: 100%;
+    /* Full width of the container */
+    height: 500px;
+    height: 12px;
+    /* Height of the track */
+    background: hsl(174, 86%, 45%);
+    /* Set the track color */
+    border-radius: 10px;
+    /* Rounded corners for the track */
+    outline: none;
+    /* Removes the outline when the input is focused */
+    /* position: relative; */
+}
+
+
+/* Style the thumb (the handle that moves) */
+#myRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Removes default thumb styling in Safari */
+    appearance: none;
+    width: 50px;
+    /* Larger thumb */
+    height: 50px;
+    /* Larger thumb */
+    background: hsl(174, 86%, 45%);
+    /* Set the thumb color */
+    border-radius: 50%;
+    /* Circular thumb */
+    cursor: pointer;
+    /* Changes the cursor when hovering over the thumb */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* Adds shadow to the thumb */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* For Firefox */
+#myRange::-moz-range-thumb {
+    width: 50px;
+    height: 50px;
+    background: hsl(174, 86%, 45%);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* For Internet Explorer */
+#myRange::-ms-thumb {
+    width: 50px;
+    height: 50px;
+    background: hsl(174, 86%, 45%);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Icon styling inside the thumb */
+#myRange::-webkit-slider-thumb::before {
+    content: "\f104";
+    /* FontAwesome icon for left arrow */
+    font-family: "Font Awesome 5 Free";
+    /* Use FontAwesome for the arrow icons */
+    font-weight: 900;
+    /* Make the icon bold */
+    color: white;
+    /* Icon color */
+    font-size: 20px;
+    /* Icon size */
+    position: absolute;
+    left: 5px;
+    /* Position left arrow */
+}
+
+#myRange::-webkit-slider-thumb::after {
+    content: "\f105";
+    /* FontAwesome icon for right arrow */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 5px;
+    /* Position right arrow */
+}
+
+/* For Firefox */
+#myRange::-moz-range-thumb::before {
+    content: "\f104";
+    /* FontAwesome icon for left arrow */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    left: 5px;
+}
+
+#myRange::-moz-range-thumb::after {
+    content: "\f105";
+    /* FontAwesome icon for right arrow */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 5px;
+}
+
+/* For Internet Explorer */
+#myRange::-ms-thumb::before {
+    content: "\f104";
+    /* FontAwesome icon for left arrow */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    left: 5px;
+}
+
+#myRange::-ms-thumb::after {
+    content: "\f105";
+    /* FontAwesome icon for right arrow */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 5px;
+}
